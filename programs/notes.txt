@@ -1,0 +1,137 @@
+
+
+C - datatyeps
+---
+int a = 10;
+int a[3] = {10,20,30};
+float b = 20;
+char c = "z";
+double
+long
+short
+
+
+python objects 
+-----------------
+number
+string 
+list
+tuple
+dictionary
+set
+
+
+a = 10
+aname = "hello"
+b = 20
+c = "z"
+alist = [10,20,30]
+
+*** Everythign in python is object ***
+*** Every object contains methods *****
+
+
+string 
+-----------
+string is defined in single or double or triple quotes. 
+
+aname = 'python programming'
+bname = "java programming"
+cname = """unix programming"""
+dname = '''java scripting'''
+ename = "a"
+
+
+conditions 
+-------------
+simple if 
+if-else
+if-elif-elif-elif-elif-else
+
+
+
+
+
+list  ( array in C)( mutable)
+------------------
+list is mutable - elements inside list can be modified
+list contains set of elements.
+Elments can be set of numbers or strings or  any combination
+list is defined in [].
+
+alist = [10,20,30,40]
+blist = ["unix","java"]
+clist = [10,45.4,"java","oracle",[50,60,70]]
+
+
+
+tuple  ( immutable , unchangeable , uneditable )
+-------
+tuple  contains set of elements.
+Elements can be set of numbers or strings or  any combination
+tuple is defined in ().
+** elements inside tuple cannot be modfied directly ****
+
+
+# list of lists
+empdb = [["ram",12345,"1-1-90'],['rita','45678,'2-2-95'],["gita",675443,'3-3-96']]
+
+# list of tuples
+empdb = [("ram",12345,"1-1-90'),('rita','45678,'2-2-95'),("gita",675443,'3-3-96')]
+
+
+
+
+
+
+
+atup = (10,20,30)
+btup = (30,40,50)
+ctup = (435,"hello",400)
+
+
+
+dictionary ( other languages : json  hash   hashmap   associativearray    pairs )
+-------------------------
+dictionary contains keys and values.
+key can be number or string to identify the value
+value can be number or string or list or tuple or dictionary 
+dictionary is defined in {}.
+
+syntax:   object = { key:value , key:value , key:value }
+example:   book  = {"chap1":10 ,"chap2":20 ,"chap3":30 }
+
+
+
+book - index 
+--------------
+
+chap1   10
+chap2   20
+chap3   30
+
+
+
+set  ( venn diagrams in school maths)
+-----
+set is UNORDERED collection of UNIQUE elemnets of SAME type.
+set is defined in {}.
+
+aset = {10,10,10,20,20,30,30}
+
+
+
+builtin functions 
+-------------------
+print()
+range()
+len()
+type()
+
+
+list()
+tuple()
+int()
+float()
+set()
+dict()
