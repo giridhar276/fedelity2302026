@@ -1,6 +1,6 @@
 
 
-C - datatyeps
+C - datatypes
 ---
 int a = 10;
 int a[3] = {10,20,30};
@@ -99,7 +99,7 @@ value can be number or string or list or tuple or dictionary
 dictionary is defined in {}.
 
 syntax:   object = { key:value , key:value , key:value }
-example:   book  = {"chap1":10 ,"chap2":20 ,"chap3":30 }
+example:   book  = {"chap1":10 ,"chap2":20 ,"chap3":30 ,"chap1":100 }
 
 
 
@@ -135,3 +135,202 @@ int()
 float()
 set()
 dict()
+
+
+
+
+
+
+task/requirement =     core python       + libraries   +     domain expertise
+                      ( procedural/oop)
+                      
+
+web development 
+n/w automation
+server automation
+sysystem automation 
+web automation
+testing 
+analytics 
+gen  ai 
+ml
+database
+
+
+
+builtin function 
+user defined functions 
+
+
+function | definition | block | subroutine | submodule 
+-------------------------------------------------------
+- piece of code for the code reusability
+- define the block once and call it for multiple times.
+
+
+different ways of passing arguments 
+---------------------------
+fixed arguments 
+default arguments 
+keyword arguments 
+variable length arguments
+
+
+
+
+
+file handling 
+-------------------
+txt 
+xlsx
+docx 
+json 
+log 
+csv
+pdf
+pptx 
+yaml 
+mp3 
+mp4
+mov 
+dat 
+jpg 
+gif 
+zip 
+rar
+7z
+rar
+tar
+tar.gz
+css
+
+
+
+working with flat files  :  txt csv json log dat yaml 
+
+
+working with third party files: docx pdf  pptx 7z zip 
+
+
+beauty of python programming we can read/write/edit/modify/update each and every file that includes
+flat files and third party files
+
+
+working with flat files
+---------------------------
+read mode ( r)
+write mode  (w)
+append mode (a)
+
+
+opening the file 
+-----------------
+
+syntax:  object = open(filename,mode)
+
+fobj = open("customers.txt","r") 
+# case1 : file should exist to read the file 
+
+fobj = open("customers.txt","w")
+#case1 : if the file is not existing .. fil gets created first
+#case2 : if the file is already existing.. it overwrites the existing content
+
+fobj = open("customers.txt","a")
+#case1 : if the file is not existing .. fil gets created first
+#case2 : if the file is already existing.. it appends the new content to the existing
+
+
+closing hte file 
+----------
+fobj.close()
+
+
+fileread operation 
+------------------
+
+
+1.reading the file line by line 
+2. fobj.readlines()
+3. fobj.read()
+4. using csv library
+5. using pandas library
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+excel :  openpyxl 
+docx  :  python-docx
+pdf   :  pypdf  pdfminer
+zip   :  zipfile 
+rar   :  rarfile 
+jpg   : pillow
+
+
+exception handling 
+------------------------
+There are 2 types of errors
+
+1. syntax error 
+2. semantic error or logical error or runtime error
+
+Handling the errors that occurs during runtime is known as exception handling.
+
+try 
+except 
+else
+finally
+raise
+
+
+
+
+virtual enviornments
+--------------------
+
+
+different ways of creating virtual enviornments
+-------------------------
+
+using venv library  ( venv is the builin library)
+using virtualenv library
+using pipenv library 
+using conda library
+
+
+using venv library
+-------------------------
+
+step1: create virtual enviornment
+------
+python -m venv <yourenvname>
+python -m venv myenv
+
+step2: activate your virtual enviornment
+--------
+myenv\Scripts\activate  ( windows)
+source ./myenv/bin/activate ( Mac/Linux)
+
+step3: deactivate your virtual enviornment
+------
+deactivate
+
+
+libraries - builtin libraries, third party libraries
+database setup 
+database operations 
+OOP concepts
