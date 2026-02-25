@@ -1,6 +1,6 @@
 
 
-C - datatyeps
+C - datatypes
 ---
 int a = 10;
 int a[3] = {10,20,30};
@@ -99,7 +99,7 @@ value can be number or string or list or tuple or dictionary
 dictionary is defined in {}.
 
 syntax:   object = { key:value , key:value , key:value }
-example:   book  = {"chap1":10 ,"chap2":20 ,"chap3":30 }
+example:   book  = {"chap1":10 ,"chap2":20 ,"chap3":30 ,"chap1":100 }
 
 
 
@@ -120,6 +120,9 @@ set is defined in {}.
 aset = {10,10,10,20,20,30,30}
 
 
+will display all the list of builtin functions and exceptions 
+------------------------------------------------------------------
+print(__builtins__)
 
 builtin functions 
 -------------------
@@ -135,3 +138,346 @@ int()
 float()
 set()
 dict()
+
+
+
+
+
+
+task/requirement =     core python       + libraries   +     domain expertise
+                      ( procedural/oop)
+                      
+
+web development 
+n/w automation
+server automation
+sysystem automation 
+web automation
+testing 
+analytics 
+gen  ai 
+ml
+database
+
+
+
+builtin function 
+user defined functions 
+
+
+function | definition | block | subroutine | submodule 
+-------------------------------------------------------
+- piece of code for the code reusability
+- define the block once and call it for multiple times.
+
+
+different ways of passing arguments 
+---------------------------
+fixed arguments 
+default arguments 
+keyword arguments 
+variable length arguments
+
+
+
+
+
+file handling 
+-------------------
+txt 
+xlsx
+docx 
+json 
+log 
+csv
+pdf
+pptx 
+yaml 
+mp3 
+mp4
+mov 
+dat 
+jpg 
+gif 
+zip 
+rar
+7z
+rar
+tar
+tar.gz
+css
+
+
+
+working with flat files  :  txt csv json log dat yaml 
+
+
+working with third party files: docx pdf  pptx 7z zip 
+
+
+beauty of python programming we can read/write/edit/modify/update each and every file that includes
+flat files and third party files
+
+
+working with flat files
+---------------------------
+read mode ( r)
+write mode  (w)
+append mode (a)
+
+
+opening the file 
+-----------------
+
+syntax:  object = open(filename,mode)
+
+fobj = open("customers.txt","r") 
+# case1 : file should exist to read the file 
+
+fobj = open("customers.txt","w")
+#case1 : if the file is not existing .. fil gets created first
+#case2 : if the file is already existing.. it overwrites the existing content
+
+fobj = open("customers.txt","a")
+#case1 : if the file is not existing .. fil gets created first
+#case2 : if the file is already existing.. it appends the new content to the existing
+
+
+closing hte file 
+----------
+fobj.close()
+
+
+fileread operation 
+------------------
+
+
+1.reading the file line by line 
+2. fobj.readlines()
+3. fobj.read()
+4. using csv library
+5. using pandas library
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+excel :  openpyxl 
+docx  :  python-docx
+pdf   :  pypdf  pdfminer
+zip   :  zipfile 
+rar   :  rarfile 
+jpg   : pillow
+
+
+exception handling 
+------------------------
+There are 2 types of errors
+
+1. syntax error 
+2. semantic error or logical error or runtime error
+
+Handling the errors that occurs during runtime is known as exception handling.
+
+try 
+except 
+else
+finally
+raise
+
+
+
+
+virtual enviornments
+--------------------
+
+
+different ways of creating virtual enviornments
+-------------------------
+
+using venv library  ( venv is the builin library)
+using virtualenv library
+using pipenv library 
+using conda library
+
+
+using venv library
+-------------------------
+
+step1: create virtual enviornment
+------
+python -m venv <yourenvname>
+python -m venv myenv
+
+step2: activate your virtual enviornment
+--------
+myenv\Scripts\activate  ( windows)
+source ./myenv/bin/activate ( Mac/Linux)
+
+step3: deactivate your virtual enviornment
+------
+deactivate
+
+
+libraries - builtin libraries, third party libraries
+database setup 
+database operations 
+OOP concepts
+
+
+
+library | package | module | 
+------------------------------------
+every libary contains set of methods.
+
+
+There are 2 types of libraries 
+
+1. builtin libraries
+-----------------------
+all the builtin libraries that are generally used by everyone are installed with python.
+3000+ are installed
+
+
+2. third party libraries 
+----------------------------
+Depending on the requirement developer has to install the third party library from
+ wwww.pypi.org using pip tool.
+
+
+pip install pandas  ( if version is not mentioned , pip install the lastest)
+
+pip install pandas==2.3.1  ( this install the particular version)
+
+
+pip install "pandas>=2.3.1"
+
+
+pip uninstall pandas
+
+you want to upgrade pandas to the latest veersion
+--------------------------------------------------
+pip install --upgrade pandas
+
+
+requirements.txt
+-------------------
+pandas
+scipy
+numpy
+
+you want to install the packages from file 
+-------------------------------------
+pip install -r requriements.txt
+
+take the backup of your packaages so that the same versions can be installed in different sysystem
+---------------------
+pip freeze > requriements.txt
+
+
+
+
+database creation
+---------------------
+create database employees;
+
+access your database 
+------------------
+use employees;
+
+create table 
+---------------
+create table empdb ( workclass varchar(100) , education varchar(100));
+
+inserting records 
+-----------------
+insert into empdb values('private','btech');
+insert into empdb values('public','mtech');
+
+display all the records 
+-------------------------
+select * from empdb;
+
+
+
+step1: connect to database 
+step2: define query 
+step3: execute query 
+step4: display output 
+step5: disconnect
+
+
+################ file -----> database
+
+write a program to read employee.csv line by line and insert workclass and education columns
+  to the database
+
+################ database ----->  excel file 
+write a program to read all the records from database table and write the output to excel file .
+
+
+
+
+There are 2 ways of programming 
+---------------------------------
+
+1. procedural programming ( top-down)
+
+2. object oriented programming
+
+
+
+object oriented programming ( global principles for all the languages )
+============================
+class
+object
+constructor
+encapsulation
+inheritance
+polymorphism
+
+
+
+class
+------
+Class is like a blueprint of the house.
+Every class contains members( functions ) and attributes ( variables)
+
+
+object 
+--------
+object is the instance of the class.
+
+
+self 
+----
+self is the instance of the object
+
+
+Constructor 
+-------------
+constructor is invoked automatically when the object is created.
+constructor in python begins with __init__
+
+
+
+
+# other concepts in oop 
+# usecases on builtin and third party libraries 
+# web scrapping  - bs4
+# rest api, consuming rest api - requests 
+# data processing = pandas 

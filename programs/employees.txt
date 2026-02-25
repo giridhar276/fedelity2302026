@@ -1,0 +1,5 @@
+ram,30,hyderabad
+rita,25,bangalore
+sita,20,chennai
+rao,25,delhi
+

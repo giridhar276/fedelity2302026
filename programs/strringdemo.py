@@ -73,6 +73,7 @@ print(f"I am {age} years old")
 
 # conditions
 if 1 < 2 :
+
     print("true: 1 < 2")
     print("inside if")
     print("Still inside if ")
@@ -84,6 +85,7 @@ if name.islower():
 
 
 if name.startswith("p"):
+    
     print("its python programming")
 
 if name.endswith("g"):
