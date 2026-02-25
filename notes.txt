@@ -120,6 +120,9 @@ set is defined in {}.
 aset = {10,10,10,20,20,30,30}
 
 
+will display all the list of builtin functions and exceptions 
+------------------------------------------------------------------
+print(__builtins__)
 
 builtin functions 
 -------------------
@@ -334,3 +337,147 @@ libraries - builtin libraries, third party libraries
 database setup 
 database operations 
 OOP concepts
+
+
+
+library | package | module | 
+------------------------------------
+every libary contains set of methods.
+
+
+There are 2 types of libraries 
+
+1. builtin libraries
+-----------------------
+all the builtin libraries that are generally used by everyone are installed with python.
+3000+ are installed
+
+
+2. third party libraries 
+----------------------------
+Depending on the requirement developer has to install the third party library from
+ wwww.pypi.org using pip tool.
+
+
+pip install pandas  ( if version is not mentioned , pip install the lastest)
+
+pip install pandas==2.3.1  ( this install the particular version)
+
+
+pip install "pandas>=2.3.1"
+
+
+pip uninstall pandas
+
+you want to upgrade pandas to the latest veersion
+--------------------------------------------------
+pip install --upgrade pandas
+
+
+requirements.txt
+-------------------
+pandas
+scipy
+numpy
+
+you want to install the packages from file 
+-------------------------------------
+pip install -r requriements.txt
+
+take the backup of your packaages so that the same versions can be installed in different sysystem
+---------------------
+pip freeze > requriements.txt
+
+
+
+
+database creation
+---------------------
+create database employees;
+
+access your database 
+------------------
+use employees;
+
+create table 
+---------------
+create table empdb ( workclass varchar(100) , education varchar(100));
+
+inserting records 
+-----------------
+insert into empdb values('private','btech');
+insert into empdb values('public','mtech');
+
+display all the records 
+-------------------------
+select * from empdb;
+
+
+
+step1: connect to database 
+step2: define query 
+step3: execute query 
+step4: display output 
+step5: disconnect
+
+
+################ file -----> database
+
+write a program to read employee.csv line by line and insert workclass and education columns
+  to the database
+
+################ database ----->  excel file 
+write a program to read all the records from database table and write the output to excel file .
+
+
+
+
+There are 2 ways of programming 
+---------------------------------
+
+1. procedural programming ( top-down)
+
+2. object oriented programming
+
+
+
+object oriented programming ( global principles for all the languages )
+============================
+class
+object
+constructor
+encapsulation
+inheritance
+polymorphism
+
+
+
+class
+------
+Class is like a blueprint of the house.
+Every class contains members( functions ) and attributes ( variables)
+
+
+object 
+--------
+object is the instance of the class.
+
+
+self 
+----
+self is the instance of the object
+
+
+Constructor 
+-------------
+constructor is invoked automatically when the object is created.
+constructor in python begins with __init__
+
+
+
+
+# other concepts in oop 
+# usecases on builtin and third party libraries 
+# web scrapping  - bs4
+# rest api, consuming rest api - requests 
+# data processing = pandas 
