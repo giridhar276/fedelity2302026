@@ -1,0 +1,1647 @@
+
+
+
+
+lab url : 	
+------------------------------------
+https://cloud.cdp.rpsconsulting.in/console/
+
+
+
+password:Rps@Support9
+
+username         
+------------------------------
+25PRE4790_U01    Ajith Kumar
+25PRE4790_U02 Kaveesha A
+25PRE4790_U03    Suresh  
+25PRE4790_U04    Reshma A
+25PRE4790_U05 Mohamed Aadil 
+25PRE4790_U06  Akilashri R B
+25PRE4790_U07  Nischitha M Upadhya
+25PRE4790_U08	 Sneha Basetti
+25PRE4790_U09   Kokilavani 
+25PRE4790_U10  Vignesh K
+25PRE4790_U11 Aaqib
+25PRE4790_U12 Vikas Shetty
+25PRE4790_U13 Shiyam Ganesh T
+25PRE4790_U14 Indhumathi 
+25PRE4790_U15   Ashika S L
+25PRE4790_U16  Gunasekhar B
+25PRE4790_U17 Karthik Samy 
+25PRE4790_U18 Badrinarayanan S
+25PRE4790_U19  Vinay Eswara
+25PRE4790_U20  Pradeepa C H
+25PRE4790_U21  Shreyas
+25PRE4790_U22 Sathish
+25PRE4790_U23 Sowjanya T
+25PRE4790_U24 Abhishek Kaliyath
+25PRE4790_U25 Prasanthi
+25PRE4790_U26 Thilak
+25PRE4790_U27 Kullayappa
+25PRE4790_U28 Aneesh
+25PRE4790_U29 Praveen
+
+
+
+C - header files 
+-----------------
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+#include<graphics.h>
+#include<string.h>
+
+
+
+
+
+#p    y     t     h      o      n        p    r    o     g    r     a    m    m   i   n    g
+# 0   1     2      3     4      5   6    7    8    9    10    11   12    13  14   15  16   17
+#                                                                       -5   -4   -3  -2   -1  
+
+name = "python programming"
+print(name)
+# slicing
+#string[start:stop:step]
+print("I love",name)
+print(name[0])
+print(name[1])
+print(name[-1])
+print(name[-2])
+print(name[0:10])
+print(name[8:10])
+print(name[3:6])
+
+print(name[0:18:1])
+print(name[0:18])
+print(name[0:18:2])
+print(name[0:18:4])
+print(name[-4:-2])
+
+print(name[0:18:1])
+print(name[0:18])
+print(name[:]) # start = 0  , stop = 18 , step = 1
+print(name[::])# start = 0  , stop = 18 , step = 1
+print(name[::-1]) 
+print(name[5::-1])
+print(name[8:2:-1])
+
+
+
+
+
+
+
+
+name = "python programming language"
+print(name.capitalize())
+print(name.upper())
+print(name.isupper())
+print(name.lower())   # displaying string in lower
+print(name.islower()) # validating whether hte string is lower or not
+print(name.count("p"))
+print(name.count("z"))
+print(name.endswith("g"))
+print(name.startswith("p"))
+print(name.startswith("z"))
+print(name.split(" "))
+print(name.find("ram")) # if existing it returns the starting index of substring
+                        # if not existing .. it returns -1
+
+aname = " python  "
+print(len(aname))    # return the no. of characters
+print(aname.strip()) # remove whitespaces at both ends
+print(len(aname.strip()))
+print(len(aname.lstrip())) # only remove at left side
+print(len(aname.rstrip())) # only remove at right side
+
+print(name.center(60))
+print(name.encode("utf-8"))  # convertin the string to byte format # utf-8 is default
+print(name.encode("utf-16"))
+print(name.replace("python","java"))
+bname = "python      programming"
+print(bname.replace("      "," "))
+
+
+
+
+
+########### string formatting ###########
+string = "I love {} and {}"
+print(string.format("Delhi","Hyderabad"))
+print(string.format("python","java"))
+
+age = 30
+print(f"I am {age} years old")
+
+
+########## file write operation
+
+fobj = open("languages.txt", "w")
+print(fobj)
+fobj.write("pythonprogramming\n")
+fobj.write("unix\n")
+
+fobj.writelines(["unix", "java", "genai\n"])
+
+for value in range(1,10):
+    fobj.write(str(value) + "\n")
+
+fobj.close()
+
+
+
+
+
+
+
+
+# conditions
+if 1 < 2 :
+    print("true: 1 < 2")
+    print("inside if")
+    print("Still inside if ")
+
+
+name = "python programming"
+if name.islower():
+    print("string is lower")
+
+
+if name.startswith("p"):
+    print("its python programming")
+
+if name.endswith("g"):
+    print("its someother language")
+
+
+if 1 == 2:
+    print("both are equals")
+
+
+lang = input("Enter any langauge")
+if lang == "python":
+    print("its python")
+
+
+
+
+
+if 1 < 2 :
+    print("true: 1 < 2")
+    print("inside if")
+    print("Still inside if ")
+else:
+    print("false")
+
+name = "python programming"
+if name.islower():
+    print("string is lower")
+else:
+    print("string is upper")
+
+
+if name.startswith("p"):
+    print("its python programming")
+else:
+    print("its somther langauge")
+
+
+if 1 == 2:
+    print("both are equal")
+else:
+    print("both are unequal")
+
+
+
+
+
+# check whether the substring is existing or not
+name = "python programming"
+if "ram" in name:
+    print("its python")
+
+
+
+
+########################## list ##########################
+alist =[40,34,56,23,56,25,3,83]
+#slicing
+print(alist[0:5])
+print(alist[::-1])
+
+#methods
+alist.append(100)   # adding single object ot the list
+print("AFter appneding:",alist)
+
+alist.extend([45,17,34,83]) # adding multiple values to the list
+print("After extending:",alist)
+
+alist.insert(1,200)
+print("After inserting :",alist)
+
+alist.pop(0) # list.pop(index)
+print("After pop operation:",alist)
+
+#alist.remove(1000)
+if 100 in alist:    
+    alist.remove(100)
+else:
+    print("100 is not the part of list")
+
+alist.reverse()
+print("reversing the list :",alist)
+alist.sort()
+print("ascending order:", alist)
+alist.sort(reverse=True)
+print("descending order:",alist)
+
+
+
+
+
+
+
+
+
+alist = [10,120,20,30,100,40,50]
+if 100 in alist:
+    getindex = alist.index(100)
+    alist.insert(getindex+1,200)
+    print(alist)
+
+
+
+
+
+
+
+####### difference between list and tuple
+alist = [10,20,30]
+alist[0] = 100
+print(alist)
+
+"""
+atup = (10,20,30)
+atup[0] = 100
+print(atup)
+"""
+
+
+atup = (10,20,30)
+alist = list(atup)  # converting to list
+alist.append(40)    # makgin changes
+atup = tuple(alist) # reconverting back to tuple
+print(atup)
+
+
+
+
+
+
+
+
+book  = {"chap1":10 ,"chap2":20 ,"chap3":30 }
+# display dictionary
+print(book)
+# add new key-value pairs
+book["chap4"] = 40
+book["chap5"] = 50
+book["chap6"] = 60
+print(book)
+# display individual values
+print(book["chap1"])
+print(book["chap2"])
+
+## methods
+
+# display all the keys
+print( book.keys())
+
+
+# display all the values	
+print(book.values())
+
+
+# display key-value pairs
+print(book.items())
+
+
+
+
+
+
+
+
+################ numbeers
+for i in range(1,10,2):   #range(start,stop,step) is a builtin function
+    print(i)
+
+for i in range(10,0,-1):
+    print(i)
+
+######################### iterating string
+name = "python"
+for char in name:
+    print(char)
+
+####################### iterating list
+alist = [10,20,30,40,50,60,70]
+for value in alist:
+    print(value)
+
+########################### iterating tuple
+atup = (10,20,30,40)
+for value in atup:
+    print(value)
+
+###################### iterating dictionary
+book = {"chap1":10 ,"chap2":20}
+for key in book.keys():
+    print(key)
+
+for value in book.values():
+    print(value)
+
+for k,v in book.items(): # book.items() : [("chap1",10),("chap2":20)]
+    print(k,v)
+
+
+
+
+###############################################################################################################
+
+
+
+
+
+colors = [
+{
+"colors": "red",
+"values": "#f00"
+},
+{
+"colors": "green",
+"values": "#0f0"
+},
+{
+"colors": "blue",
+"values": "#00f"
+},
+{
+"colors": "cyan",
+"values": "#0ff"
+},
+{
+"colors": "magenta",
+"values": "#f0f"
+},
+{
+"colors": "yellow",
+"values": "#ff0"
+},
+{
+"colors": "black",
+"values": "#000"
+}
+]
+
+
+wirte a program to dislay color and its code
+
+output: 
+
+red - #f00
+green - #0f0
+..
+..
+..
+..
+black - #000
+
+
+
+
+for item in colors:
+    print(item['colors'] , item['values'])
+    #print(item.get('colors') , item.get("values"))
+
+####################################################################################################
+
+
+Write a program to display all employee names and their departments.
+
+employees = {
+    "E001": {"name": "Alice", "department": "Finance"},
+    "E002": {"name": "Bob", "department": "IT"},
+    "E003": {"name": "Charlie", "department": "HR"}
+}
+
+
+sample output:
+
+Alice  Finance
+Bob    IT
+
+
+
+print(type(employees))
+
+for key,value in employees.items():
+    print(value['name'].ljust(10), value['department'])
+
+
+for empinfo in employees.values():
+    print(empinfo['name'].ljust(10) , empinfo['department'])
+
+
+####################################################################################################
+
+
+Write a program to print all product names and prices.
+
+products = [
+    {"id": 101, "name": "Laptop", "price": 75000},
+    {"id": 102, "name": "Mobile", "price": 25000},
+    {"id": 103, "name": "Tablet", "price": 15000}
+]
+
+
+
+for item in products:
+    print(item['name'].ljust(10) , item['price'])
+####################################################################################################
+
+Write a program to show student names with grades.
+
+students = [
+    {"id": 1, "name": "John", "marks": {"math": 80, "science": 75}},
+    {"id": 2, "name": "Jane", "marks": {"math": 90, "science": 85}}
+]
+
+
+for student in students:
+    print("Student:",student['name'])
+    print("Math:",student['marks']['math'])
+    print("Science:",student['marks']['science'])
+    print("-------------------------")
+
+
+
+
+####################################################################################################
+
+Write a program to print team names and player names.
+
+https://cloud.cdp.rpsconsulting.in/console/
+
+25PRE4790_U29
+NaturalIce!7
+
+
+Laconic$9
+
+
+sample output:
+
+TeamA
+-----
+Alice
+Bob
+
+TeamB
+-----
+Charlie
+Dave
+
+
+for team,info in teams.items():
+    print(team)
+    print("-------------")
+    for item in info:
+        print(item['name'])
+
+####################################################################################################
+
+Write a program to list customers to increment balance with 1000.
+
+
+customers = {
+    "C001": {"name": "Alice", "balance": 5000},
+    "C002": {"name": "Bob", "balance": 12000},
+    "C003": {"name": "Charlie", "balance": 3000}
+}
+
+
+output:
+{
+    "C001": {"name": "Alice", "balance": 6000},
+    "C002": {"name": "Bob", "balance": 13000},
+    "C003": {"name": "Charlie", "balance": 4000}
+}
+
+
+
+for key,value in customers.items():
+    customers[key]['balance']+=1000
+print(customers)
+
+
+
+## hardcoded code
+customers['C001']['balance']+=1000
+customers['C002']['balance']+=1000
+customers['C003']['balance']+=1000
+print(customers)
+
+####################################################################################################
+
+write a program to read the below dictionary and display the expected output
+
+info = {
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"image":
+{
+"url": "images/0001.jpg",
+"width": 200,
+"height": 200
+},
+"thumbnail":
+{
+"url": "images/thumbnails/0001.jpg",
+"width": 32,
+"height": 32
+}
+}
+
+
+sample output:
+
+ID              : 0001
+TYPE            : donut
+NAME            : Cake
+IMAGE URL       :"images/0001.jpg
+IMAGE WIDTH     : 200
+IMAGE HEIGHT    : 200
+THUMBNAIL URL   : "images/thumbnails/0001.jpg"
+THUMBNAIL WIDTH : 32
+THUMBNAIL HEIGHT:  32
+
+
+
+print(type(info))
+print(isinstance(info,dict))
+print(isinstance(info,set))
+print(isinstance(info,list))
+
+for key,value in info.items():
+    if isinstance(value,str):
+        print(key.ljust(20),value)
+    elif isinstance(value,dict):
+        for skey,svalue in value.items():
+            finalkey = key + " " + skey
+            print(finalkey.upper().ljust(20),svalue)
+
+################################################################
+
+data = {
+    'Sales': {
+        'North': {
+            'Alice': 'Manager',
+            'Bob': 'Sales Executive',
+            'Eve': 'Sales Coordinator',
+            'John': 'Account Manager'
+        },
+        'South': {
+            'Charlie': 'Sales Executive',
+            'Grace': 'Regional Sales Manager',
+            'Mallory': 'Business Development Associate'
+        },
+        'West': {
+            'Oscar': 'Sales Executive',
+            'Peggy': 'Account Executive',
+            'Victor': 'Territory Sales Manager'
+        }
+    },
+    'Marketing': {
+        'Digital': {
+            'David': 'SEO Specialist',
+            'Hannah': 'Content Strategist',
+            'Irene': 'Social Media Manager'
+        },
+        'Offline': {
+            'Eve': 'Event Coordinator',
+            'Jake': 'Brand Manager',
+            'Liam': 'Public Relations Specialist'
+        },
+        'Research': {
+            'Mia': 'Market Research Analyst',
+            'Noah': 'Customer Insights Manager'
+        }
+    },
+    'IT': {
+        'Infrastructure': {
+            'Quinn': 'Network Engineer',
+            'Riley': 'System Administrator',
+            'Sam': 'Cloud Architect'
+        },
+        'Development': {
+            'Tina': 'Software Engineer',
+            'Uma': 'Backend Developer',
+            'Walter': 'Full Stack Developer'
+        }
+    },
+    'HR': {
+        'Recruitment': {
+            'Yara': 'Recruitment Specialist',
+            'Zane': 'Talent Acquisition Manager',
+            'Nina': 'HR Coordinator'
+        },
+        'Employee Relations': {
+            'Oliver': 'Employee Relations Specialist',
+            'Sophia': 'HR Business Partner'
+        }
+    },
+    'Finance': {
+        'Accounting': {
+            'Xander': 'Accountant',
+            'Yvette': 'Accounts Payable Specialist',
+            'Zara': 'Financial Analyst'
+        },
+        'Audit': {
+            'Luna': 'Internal Auditor',
+            'Mason': 'Compliance Officer'
+        }
+    }
+}
+
+
+write a program to display the below output:
+
+
+Sales
+-----
+North
+South
+West
+
+
+Marketing
+--------
+Digital
+Offline
+Research
+
+
+IT
+---
+Infrasturcture
+Development
+
+HR
+---
+Recruitment
+Employee Relations
+
+
+
+
+
+# every process/subprocess contains system calls
+
+def display(a,b):
+    c = a + b
+    return c
+total = display(10,20)
+print(total)
+
+# pythonic way
+# lambda is the replacment of single liner function
+#syntax: functioname = lambda varibles:expression
+
+display = lambda a,b : a + b
+total = display(10,20)
+print(total)
+
+#length of string
+getlength = lambda x : len(x)
+print(getlength("python"))
+
+getupper = lambda x: x.upper()
+print(getupper("python"))
+
+# max of 2 numbers
+getmax = lambda a,b: a if a > b else b
+print(getmax(10,20))
+
+#even or odd
+checkeven = lambda x: "even" if x % 2 == 0 else "Odd"
+print(checkeven(9))
+
+# positive negative or ero
+sign = lambda x : "positive" if x > 0 else  "negative" if x < 0 else "zero"
+print(sign(-5))
+
+
+student = {"name":"rita","age":20}
+getage = lambda d : d['name']
+print(getage(student))
+
+
+getsum = lambda *args : sum(args)
+print(getsum(10,20,30,40,50,60,70,80,90,100))getsum = lambda *args :
+
+
+def getlen(z):
+    return len(z)
+
+#length of string
+getlength = lambda x : getlen(x)
+print(getlength("python"))
+
+
+
+
+
+
+
+
+############# file write operation
+
+fobj = open("languages.txt","w")
+print(fobj)
+fobj.write("pythonprogramming\n")
+fobj.write("unix\n")
+
+
+fobj.writelines(["unix","java","genai\n"])
+
+
+for value in range(1,10):
+    fobj.write(str(value) + "\n")
+
+
+fobj.close()
+
+
+
+
+
+
+
+# method1
+with open("employees.txt","r") as fobj:
+    for line in fobj:
+        print(line.strip())
+
+# method2
+with open("employees.txt","r") as fobj:
+    print(fobj.readlines())  
+["ram,30,hyderabad","rita,25,bangalore"]
+
+# method3
+with open("employees.txt","r") as fobj:
+    print(fobj.read())  # fobj.read() ------> string
+
+# method4 - using csv library
+import csv
+with open("employees.txt","r") as fobj:
+    reader = csv.reader(fobj)
+    for line in reader:
+        print(line)
+
+#method5: using pandas librrary
+import pandas
+print(pandas.read_csv("employees.txt"))
+
+
+
+employees.txt
+----------------
+ram,30,hyderabad
+rita,25,bangalore
+sita,20,chennai
+rao,25,delhi
+
+
+
+
+https://github.com/giridhar276/fedelity2302026/tree/main
+
+##############################################################
+
+
+write a program to read employee.csv and display line by line.
+
+
+
+##############################################################
+
+write a program to read employee.csv and display workclass and education columns ONLY.
+
+##############################################################
+
+write a program to read employee.csv and display all the UNIQUE workclasses
+
+output:
+-------
+Private
+State-gov
+Self-emp-not-inc
+..
+..
+
+
+
+
+
+
+
+'''
+write a program to read employee.csv and display workclass and education columns ONLY.
+
+
+'''
+
+import csv
+try:
+    workset = set()
+    with open("employee.csv","r") as fobj:
+        header = fobj.readline()
+        reader = csv.reader(fobj)
+        for line in reader:
+            workclass= line[1]
+            workset.add(workclass)
+        for work in workset:
+            print(work)
+except Exception as err:
+    print("file not found.. please check")
+    print("system error:",err)
+###################################################################
+import csv
+try:
+    workdict = dict()
+    with open("employee.csv","r") as fobj:
+        header = fobj.readline()
+        reader = csv.reader(fobj)
+        for line in reader:
+            workclass= line[1]
+            workdict[workclass] = 1    #{"public":1, "private":1}
+        for work in workdict:
+            print(work)
+except Exception as err:
+    print("file not found.. please check")
+    print("system error:",err)
+
+##############################################################
+
+write a program to read employee.csv and display the below output
+
+Total no. of males : 876
+Total no. of females: 45
+
+
+
+
+
+import csv
+try:
+    mcount = 0
+    fcount = 0
+    with open("employee.csv","r") as fobj:
+        header = fobj.readline()
+        reader = csv.reader(fobj)
+        for line in reader:
+            gender = line[9].strip()
+            if gender == "Male":
+                mcount+=1
+            if gender == "Female":
+                fcount+=1
+
+        print("Total male count:",mcount)
+        print("Total female count:",fcount)
+except Exception as err:
+    print("file not found.. please check")
+    print("system error:",err)
+
+##############################################################
+write a program to read employee.csv
+
+
+##############################################################
+
+write a program to read employee.csv and replace all the lines containing "United-States" with "US" and write the output to empbackup.csv
+
+
+
+try:
+    with open("employee.csv") as fobj:
+        with open("empbkp.csv","w") as fw:
+            for line in fobj:
+                line = line.replace("United-States","US")
+                fw.write(line)
+except Exception as err:
+    print(err)
+##############################################################
+
+
+
+https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-8.0.45.0.msi
+
+
+
+
+
+
+
+mathoperations.py
+--------------------
+
+
+import platform
+def getsum():
+    print("this is arithemtic operation")
+
+def getsub():
+    print("this is sub operation")
+
+def getmul():
+    print("this is multiplication")
+
+def getdivision():
+    print("this is division")
+
+def getname():
+     name = platform.machine()
+     return name
+
+# __name__ is predefined handler that holds __main__
+#when we execute this program directly , below condition will be always True
+# when this program is imported to other program, condition becomes False
+if __name__ == "__main__":
+    getsum()
+    getsub()
+    getmul()
+    getdivision()
+    
+    
+    
+
+
+myprogram.py
+----------------
+
+
+import mathoperations
+
+
+mathoperations.getsum()
+mathoperations.getdivision()
+
+print(mathoperations.getname())
+
+
+
+
+
+
+
+
+database creation
+---------------------
+create database employees;
+
+access your database 
+------------------
+use employees;
+
+create table 
+---------------
+create table empdb ( workclass varchar(100) , education varchar(100));
+
+inserting records 
+-----------------
+insert into empdb values('private','btech');
+insert into empdb values('public','mtech');
+
+display all the records 
+-------------------------
+select * from empdb;
+
+
+
+
+
+
+
+
+import pymysql
+
+#step1: connect to db
+conn = pymysql.connect(host = "localhost",port=3306 , user='root',password='giri@123')
+print(conn)
+
+#step2
+cursor = conn.cursor()
+query = "select * from employees.empdb" # select * from database.tablename
+
+#step3
+cursor.execute(query)
+
+#step4
+for record in cursor.fetchall():
+    print(record)
+
+#step5
+conn.close()
+
+
+
+######################################################
+
+
+
+
+
+import pymysql
+
+#step1: connect to db
+conn = pymysql.connect(host = "localhost",port=3306 , user='root',password='giri@123')
+print(conn)
+
+#step2
+cursor = conn.cursor()
+query = "insert into employees.empdb values('{}','{}')".format('public','phd')
+
+#step3
+cursor.execute(query)
+
+#step4
+print(cursor.rowcount,"row inserted")
+
+conn.commit()
+#step5
+conn.close()
+
+
+#string = "I love {} and {}"
+#print(string.format("bang","hyd"))
+#query = "insert into employees.empdb values('{}','{}')".format("public",'mtech')
+
+
+
+
+
+################
+
+write a program to read employee.csv line by line and insert all the records to the database
+
+
+
+
+
+import pymysql
+import csv
+import os
+try:
+    #step1: connect to db
+    conn = pymysql.connect(host = "localhost",port=3306 , user='root',password='giri@123')
+    print(conn)
+
+    #step2
+    cursor = conn.cursor()
+    count = 0
+    filename = "employee.csv"
+    # if the file is existing and the file size is greater than 0 the condition becomes true
+    if os.path.isfile(filename) and os.path.getsize(filename)>0:
+        with open(filename,"r") as fobj:
+            header = fobj.readline()
+            reader = csv.reader(fobj)
+            for line in reader:
+                workclass = line[1]
+                education = line[3]
+                query = "insert into employees.empdb values('{}','{}')".format(workclass,education)
+                #step3
+                cursor.execute(query)
+                count = count + 1
+        #step4
+        print(count,"rows inserted")
+
+        conn.commit()
+        #step5
+        conn.close()
+    else:
+        print("file is not found")
+except Exception as err:
+    print(err)
+
+
+################
+
+
+
+write a program to read all the records from database table and write the output to excel file .
+( for excel use openpyxl )
+
+
+
+
+
+import pymysql
+from openpyxl import Workbook
+import time 
+#step1: connect to db
+conn = pymysql.connect(host = "localhost",port=3306 , user='root',password='giri@123')
+print(conn)
+wb = Workbook()
+# grab the active worksheet
+ws = wb.active
+
+#step2
+cursor = conn.cursor()
+query = "select * from employees.empdb" # select * from database.tablename
+
+#step3
+cursor.execute(query)
+
+#step4
+for record in cursor.fetchall():
+    #print(record)
+    ws.append(record)
+
+filename = time.strftime("empinfo_%d_%b_%Y.xlsx")
+wb.save(filename)
+#step5
+conn.close()
+
+
+
+
+
+
+
+
+
+
+# procedural programming
+print("hello")
+
+
+
+# object oriented programming
+# every class contains methods
+class Display:
+    def output(self): # self is just like this keyword in java
+        print("hello")
+
+
+# object
+obj1 = Display()     # alist = [10,20,30]
+obj1.output()        # alist.append()
+
+
+obj2 = Display()     # alist = [10,20,30]
+obj2.output()        # alist.append()
+
+
+obj3 = Display()     # alist = [10,20,30]
+obj3.output()        # alist.append()
+
+
+
+
+
+
+
+
+
+
+
+
+# procedural programming
+print("hello")
+
+
+
+# object oriented programming
+# every class contains methods
+
+class Employee:
+    def getDetails(self,name,age,city):
+        self.name = name
+        self.age = age
+        self.city = city
+
+    def displayDetails(self):
+        print("Employee name :", self.name)
+        print("Employee age  :",self.age)
+        print("Employee city:", self.city)
+
+# object creation
+emp1 = Employee()
+emp1.getDetails('rita',20,'Hyderabad')
+emp1.displayDetails()
+
+# object creation
+emp2 = Employee()
+emp2.getDetails('sita',21,'Bang')
+emp2.displayDetails()
+
+# object creation
+emp3 = Employee()
+emp3.getDetails('gita',22,'Chennai')
+emp3.displayDetails()
+
+
+
+################################
+
+
+
+
+
+
+
+
+
+# procedural programming
+print("hello")
+
+
+
+# object oriented programming
+# every class contains methods
+
+class Employee:
+    def __init__(self,name,age,city):
+        self.name = name
+        self.age = age
+        self.city = city
+
+    def displayDetails(self):
+        print("Employee name :", self.name)
+        print("Employee age  :",self.age)
+        print("Employee city:", self.city)
+
+# object creation
+emp1 = Employee('rita',20,'Hyderabad')
+emp1.displayDetails()
+
+# object creation
+emp2 = Employee('sita',21,'Bang')
+emp2.displayDetails()
+
+# object creation
+emp3 = Employee('gita',22,'Chennai')
+emp3.displayDetails()
+
+
+
+
+
+
+
+
+
+### object oriented
+import csv
+class FileOperations:
+    def __init__(self,filename):
+        self.filename = filename
+    def displayLines(self):
+        with open(self.filename,"r") as self.fobj:
+            self.reader = csv.reader(self.fobj)
+            for line in self.reader:
+                print(line)
+
+if __name__ == "__main__":
+    file1 = FileOperations("employee.csv")
+    file1.displayLines()
+
+
+
+
+
+##############################
+
+
+
+
+import pymysql
+import os
+#pip install python-dotenv
+from dotenv import load_dotenv
+# we are loading all envrionment variables
+load_dotenv()
+hostname = os.getenv("HOST")
+user = os.getenv("USER")
+port = int(os.getenv("PORT"))
+password = os.getenv("PASSWORD")
+
+#step1: connect to db
+conn = pymysql.connect(host = hostname,port=port , user=user,password=password)
+print(conn)
+
+#step2
+cursor = conn.cursor()
+query = "select * from employees.empdb" # select * from database.tablename
+
+#step3
+cursor.execute(query)
+
+#step4
+for record in cursor.fetchall():
+    print(record)
+
+
+
+
+
+################################### frequently used builtin libraries #############################
+
+os         : os level activities
+math       : mathematical operations
+sys        :  sys and python config data
+shutil     : copy,move, rmtree  etc
+urllib     : read the web, downloading the files
+logging    : logging all the events
+smtplib    : sending the mails
+ftplib     : performing ftp operations
+sysconfig  :  sys and python config data
+zipfile    : create/extract the zip files
+rarfile    : create/extract the rar files
+cryptopgraphy : encrypting and decrypting the data or files
+tarfile    : create/extract the tar files
+filecmp    : comparing files or directories
+sqlite3    : python default database
+csv        : reading/writing csv files
+xml        : reading/writing xml files
+calendar   : display month,year calendar info
+datetime   : working with date n time
+time       : working with date n time
+fractions  : working with decimal values
+glob       : display all the files
+heapq      : more of array operations ( getting largest among list )
+subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+pdb        : python debugger
+platform   : platform information
+random     : random operations ( shuffling , random digit ... )
+re         : grep + awk + sed
+socket     : networking programming
+stat       : stats of the file
+statistics : basic statistics
+pathlib	   : Object-oriented file path operations
+time	     : Delays, timestamps, performance checks
+logging	   : Logging for scripts/apps (replace print for real apps)
+argparse	 : Command-line interface (CLI) argument parsing
+configparser : 	Read/write .ini config files
+json	     :Serialize/deserialize JSON (common in APIs)
+uuid	     : Generate unique IDs (useful in files, databases)
+statistics	:Basic stats: mean, median, stdev
+random	    :Random number generation, sampling
+collections	:Specialized containers (defaultdict, Counter, namedtuple)
+traceback	   :Print/format exception tracebacks
+warnings	   :Raise and handle warnings
+
+
+
+
+
+
+
+
+"""osdemo.py
+
+Demonstrates frequently used functions from the `os` and `shutil` modules.
+Run with: python osdemo.py
+
+This script is safe to run: it operates in a temporary demo directory
+`demo_osdir` inside the current working directory and cleans up at the end.
+"""
+import os
+import shutil
+import sys
+from pathlib import Path
+
+
+def main():
+    cwd = Path.cwd()
+    print("Current working directory:", cwd)
+
+    demo_dir = cwd / "demo_osdir"
+    # create directory (os.mkdir and os.makedirs)
+    if demo_dir.exists():
+        shutil.rmtree(demo_dir)
+    os.mkdir(demo_dir)
+    print("Created directory:", demo_dir)
+
+    # change directory (os.chdir)
+    os.chdir(demo_dir)
+    print("Changed directory to:", Path.cwd())
+
+    # create nested directories with os.makedirs
+    nested = demo_dir / "a" / "b" / "c"
+    os.makedirs(nested)
+    print("Created nested directories:", nested)
+
+    # list directory contents (os.listdir)
+    print("Contents of demo_dir:", os.listdir(demo_dir))
+
+    # file operations: open, write, read
+    file1 = nested / "hello.txt"
+    with open(file1, "w", encoding="utf-8") as f:
+        f.write("Hello from osdemo!\n")
+    print("Wrote file:", file1)
+
+    # os.path utilities
+    print("Is file1 a file?", os.path.isfile(file1))
+    print("Is 'a' a directory?", os.path.isdir(demo_dir / "a"))
+    print("Absolute path of file1:", os.path.abspath(file1))
+
+    # join and split
+    joined = os.path.join(str(nested), "hello.txt")
+    head, tail = os.path.split(joined)
+    print("Joined path:", joined)
+    print("Head:", head, "Tail:", tail)
+
+    # getsize
+    print("Size of file1 (bytes):", os.path.getsize(file1))
+
+    # walk the tree (os.walk)
+    print("\nWalking demo_dir:")
+    for root, dirs, files in os.walk(demo_dir):
+        print("ROOT:", root)
+        print(" DIRS:", dirs)
+        print(" FILES:", files)
+
+    # environment variables (os.environ)
+    print("\nSome environment vars:")
+    print("PATH exists:", "PATH" in os.environ)
+    print("PYTHONPATH:", os.environ.get("PYTHONPATH"))
+
+    # create a copy of file (shutil.copy)
+    copied = demo_dir / "copied_hello.txt"
+    shutil.copy(file1, copied)
+    print("Copied file to:", copied)
+
+    # rename/move (os.rename)
+    renamed = demo_dir / "hello_renamed.txt"
+    os.rename(copied, renamed)
+    print("Renamed moved file to:", renamed)
+
+    # permissions (os.stat)
+    print("File stat for hello.txt:", os.stat(file1))
+
+    # remove a file (os.remove / os.unlink)
+    os.remove(renamed)
+    print("Removed file:", renamed)
+
+    # remove directories (os.rmdir requires empty dir)
+    # remove nested directories bottom-up
+    os.remove(file1)
+    os.removedirs(nested)  # removes c, b, a if empty
+    print("Removed nested directories and file1")
+
+    # change back to original cwd and remove demo dir tree
+    os.chdir(cwd)
+    shutil.rmtree(demo_dir)
+    print("Cleaned up demo directory. Back to:", Path.cwd())
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception:
+        print("An error occurred:", file=sys.stderr)
+        raise
+
+
+
+
+#############
+
+write a program to display all the files from the current directly line by line with exception handling 
+
+#############
+
+write a program to display all the files and its size 
+
+#############
+
+write a program to delete all the .csv files from the current directly
+
+#############
+write a program to create 10 directories in the current directory
+
+dir1
+dir2
+dir3
+dir4
+..
+..
+..
+dir10
+
+#############
+
+
+write a script to perform the below operations :
+
+1. display current working directory
+2. display login name
+3. display all environment variables
+4. display today's date ( timestamp )
+5. display May months calendar
+6. display all .py files and its size in bytes
+7. display the modified time of employees.csv file
+8. display current process id
+
+
+
+import os
+import datetime
+import calendar
+try:
+    pwd = os.getcwd()
+    print("Current working directory :", pwd)
+    print("loginame :", os.getlogin())
+    print("display all enviornment variables:")
+    for key,value in os.environ.items():
+        print(key)
+        print(value)
+        print("------")
+    print(datetime.datetime.now())
+    print(calendar.month(2025,5))
+    print(calendar.calendar(2025))
+
+
+    for file in os.listdir():
+        if file.endswith(".py"):
+            print(file.ljust(20), os.path.getsize(file),"bytes")
+
+    print(os.getpid())
+except Exception as err:
+    print(err)
+
+
+
+
+#############
+
+write a script to display the below information 
+
+1. CPU percentage
+2. Memory info ( total memory, available, used)
+3. process info
+4. disk partitions
+5. network statistics
+4. platform details ( like OS name , model , python version)
+5. boot time of your system
+6. IP Address of your system
+7. hostname of the system
+
+
+import psutil
+import platform
+import socket
+import datetime
+print(psutil.cpu_percent(interval=1))
+print(psutil.virtual_memory())
+print(psutil.disk_partitions())
+#print(psutil.net_connections())
+print(platform.platform())
+print(platform.python_version())
+print(psutil.boot_time())  # will return epoch time in seconds
+print(datetime.datetime.fromtimestamp(psutil.boot_time()).strftime("%Y-%m-%d %H:%M:%S"))
+
+hostname = socket.gethostname()  
+ip_address = socket.gethostbyname(hostname)  
+host_info = socket.gethostbyaddr(ip_address)  
+
+print("Hostname:", hostname)
+print("IP Address:", ip_address)
+
+#############
+
+
+#############
+
+
+#############
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
