@@ -19,8 +19,8 @@ def getname():
 # __name__ is predefined handler that holds __main__
 #when we execute this program directly , below condition will be always True
 # when this program is imported to other program, condition becomes False
-
-getsum()
-getsub()
-getmul()
-getdivision()
+if __name__ == "__main__":
+    getsum()
+    getsub()
+    getmul()
+    getdivision()
