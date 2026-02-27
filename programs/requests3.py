@@ -1,5 +1,3 @@
-
-
 """requests3.py
 
 Fetch users from the GitHub API (https://api.github.com/users) with optional

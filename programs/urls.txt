@@ -1,0 +1,5 @@
+https://httpbin.org/get
+https://httpbin.org/delay/1
+https://www.python.org
+https://www.wikipedia.org
+https://www.perl.org
