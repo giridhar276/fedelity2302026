@@ -578,4 +578,34 @@ web scraping  - bs4
 multithreading 
 oops 
 
-introduction to machine learning , gen ai
+introduction to machine learning , gen aiw
+
+
+
+
+
+web scraping 
+----------------
+
+1. read the webpage   ---->  import requests
+2. process the webpage ---> use bs4 library
+
+
+
+
+sequential execution 
+---------------------------
+employee1.csv  - 5 mins 
+employee2.csv  - 5 mins 
+employee3.csv  - 5 mins 
+-------------------------
+                15 mins 
+-----------------------------
+
+
+employee1.csv  - Thread1
+employee2.csv  - Thread2
+employee3.csv  - Thread3
+------------------------------
+                  5 mins 
+------------------------
