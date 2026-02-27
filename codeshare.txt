@@ -1637,6 +1637,355 @@ print("IP Address:", ip_address)
 
 
 
+import requests
+from bs4 import BeautifulSoup
+
+#step1: read the webpage
+response = requests.get("https://www.google.com/")
+# if the page is accesible then status code will be 200
+if response.status_code == 200:
+    soup = BeautifulSoup(response.text, 'html.parser')
+    for link in soup.find_all('a'):
+        print(link.get('href'))
+        print("---------------")
+
+
+
+
+employee.json
+-------------------
+{"name": "John Doe",
+ "age": 30,
+ "city": "New York",
+ "job": "Software Engineer",
+ "skills": ["Python", "JavaScript", "SQL"],
+ "experience": 5
+}
+
+
+
+
+
+import json 
+
+with open('employee.json', 'r') as file:
+    data = json.load(file)
+    for key,value in data.items():
+        print(key,value)
+
+
+
+
+
+
+
+
+import requests
+import json
+response = requests.get("https://api.github.com/")
+#print(type(response.text))
+data = json.loads(response.text)
+for key,value in data.items():
+    print(key,value)
+
+
+
+
+##############################
+
+
+
+
+
+import requests 
+
+url = "https://fakestoreapi.com/"    # url = "https://www.api.instagram.com"
+endpoint = "products"
+finalurl = url + endpoint 
+
+response = requests.get(finalurl,auth=('user', 'pass'))
+if response.status_code == 200:
+    data = response.json()
+    for item in data:
+        print("ID:", item['id'])
+        print("Title:", item['title'])
+        print("Price:", item['price'])
+        print("Category:", item['category'])
+        print("Description:", item['description'])
+        print("Image URL:", item['image'])
+        print("-" * 40)
+
+#########################################################################
+
+endpoint = "users"
+finalurl = url + endpoint
+response = requests.get(finalurl)
+if response.status_code == 200:
+    data = response.json()
+    for user in data:
+        print("ID:", user['id'])
+        print("Name:", user['name']['firstname'], user['name']['lastname'])
+        print("Username:", user['username'])
+        print("Email:", user['email'])
+        print("Phone:", user['phone'])
+        print("Address:", user['address']['street'], user['address']['city'], user['address']['zipcode'])
+        print("-" * 40)
+
+
+
+
+
+############post method #####
+import requests 
+
+payload = {'title': 'New Product', 'price': 29.99}
+
+url = "https://fakestoreapi.com/"    # url = "https://www.api.instagram.com"
+endpoint = "products"
+finalurl = url + endpoint  
+
+response = requests.post(finalurl, json=payload)
+print(response.status_code)
+print(response.json())
+
+
+
+#######################################
+
+write a program to create a repository in github using rest api
+
+
+
+
+import requests
+
+try:
+    token = "yourtoken"
+
+    reponame = "apidemos"
+    
+    data = {
+        "name": reponame,
+        "description": "This is a test repository created via API",
+        "private": False
+    }
+
+    response = requests.post("https://api.github.com/user/repos", json=data, auth=("giridhar276", token))
+
+    print(response.status_code)
+except Exception as e:
+    print("An error occurred:", e)
+
+
+
+########################################
+
+
+
+
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+
+@app.route("/east")
+def east():
+    return "<p>this is east direction!</p>"
+
+
+
+@app.route("/west")
+def west():
+    return "<p>this is west direction!</p>"
+
+
+
+@app.route("/north")
+def north():
+    return "<p>this is north direction!</p>" 
+
+
+@app.route("/south")
+def south():
+    return "<p>this is south direction!</p>"    
+
+
+
+
+app.run(debug=True,port=5432)
+
+
+
+
+
+
+
+
+
+from flask import Flask, render_template, flash
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Length, Email
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = '11117d441f27d441f27567d441f2b6176a'
+app.config['DEBUG'] = True
+
+
+class ReusableForm(FlaskForm):
+    name = StringField('Name:', validators=[DataRequired()])
+    email = StringField('Email:', validators=[DataRequired(), Email(), Length(min=6, max=35)])
+    password = PasswordField('Password:', validators=[DataRequired(), Length(min=3, max=35)])
+    submit = SubmitField('Register')
+
+
+@app.route("/", methods=['GET', 'POST'])
+def hello():
+    form = ReusableForm()
+
+    if form.validate_on_submit():
+        name = form.name.data
+        email = form.email.data
+        password = form.password.data
+
+        print(name, email, password)
+        flash(f'Thanks for registration {name}')
+    elif form.is_submitted():
+        flash('Error: All the form fields are required.')
+
+    return render_template('hello.html', form=form)
+
+
+if __name__ == "__main__":
+    app.run()
+
+
+
+
+
+
+
+
+
+
+import threading 
+import time 
+
+
+
+def say_hello():
+    for i in range(3):
+        print("Hello from thread A")
+        time.sleep(0.5)   
+
+def prime_numbers():
+    for i in range(1,6):
+        print("Hello from thread B")
+        time.sleep(0.3)  
+
+t1 = threading.Thread(target=say_hello)
+t2 = threading.Thread(target=prime_numbers)
+
+t1.start()
+t2.start()
+
+
+t1.join()
+t2.join()   
+
+print("Done")
+
+
+#######################################################################
+
+import threading
+import time
+
+def greet(name, times):
+    for i in range(times):
+        print(f"Hi {name} ({i+1})")
+        time.sleep(0.4)
+
+t = threading.Thread(target=greet, args=("Giri", 5))
+t.start()
+t.join()
+print("Finished")
+
+
+#######################################################################
+
+import threading
+import time
+
+def worker():
+    print("Running in:", threading.current_thread().name)
+    time.sleep(1)
+
+t1 = threading.Thread(target=worker, name="Worker-1")
+t2 = threading.Thread(target=worker, name="Worker-2")
+
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+
+#######################################################################
+
+urls.txt
+------
+https://httpbin.org/get
+https://httpbin.org/delay/1
+https://www.python.org
+https://www.wikipedia.org
+https://www.perl.org
+
+withoutthreads.py
+--------------------------
+
+##### without threading ######
+import time
+import requests
+
+def download(url):
+    start = time.time()
+    try:
+        r = requests.get(url, timeout=10)
+        status = r.status_code
+        msg = "OK"
+    except Exception as e:
+        status = ""
+        msg = f"ERROR: {e}"
+    seconds = round(time.time() - start, 3)
+    print(url, "->", status, "|", seconds, "sec |", msg)
+
+# read urls
+with open("urls.txt", "r") as f:
+    urls = [line.strip() for line in f if line.strip()]
+
+total_start = time.time()
+
+for url in urls:
+    download(url)
+
+total_seconds = round(time.time() - total_start, 3)
+print("TOTAL TIME:", total_seconds, "sec")
+
+
+#######################################################################
+
+
+
+#######################################################################
+
+
+
+
+
 
 
 
